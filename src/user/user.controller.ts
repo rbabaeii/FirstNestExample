@@ -11,7 +11,7 @@ export class UserView{
     findUser(){
         return this.Uservice
     }
-    @Post()
+    @Post("/create")
     createUser(@Body() Userdto : CreateUserDto){
         this.Uservice.create(Userdto)
     }
